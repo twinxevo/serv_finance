@@ -1,3 +1,4 @@
+import 'package:fintech_app/screens/homePage/bottomNavigation.dart';
 import 'package:fintech_app/screens/homePage/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
@@ -273,7 +274,8 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                 Navigator.push(
                                   context,
                                   MaterialPageRoute(
-                                      builder: (context) => const HomeScreen()),
+                                      builder: (context) =>
+                                          const BottomNavigationB()),
                                 );
                               },
                               child: const Text(

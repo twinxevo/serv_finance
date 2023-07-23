@@ -152,10 +152,9 @@ class _HomeScreenState extends State<HomeScreen> {
                       child: Padding(
                         padding:
                             const EdgeInsets.symmetric(horizontal: 30.0 - 10),
-                        child: Card(
-                          elevation: 1,
+                        child: SingleChildScrollView(
                           child: SizedBox(
-                            height: size.height * 1,
+                            //height: size.height * 1,
                             width: size.width * .9,
                             child: Column(
                               children: [
@@ -164,7 +163,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                   elevation: 5,
                                   child: SizedBox(
                                     height: 200,
-                                    width: size.width * .7,
+                                    width: size.width * .8,
                                     child: Column(
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
@@ -302,13 +301,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                 ),
-                                const SizedBox(height: 25),
+                                const SizedBox(height: 20),
                                 Padding(
                                   padding: const EdgeInsets.only(left: 8.0),
                                   child: Row(
                                     children: const [
                                       Text(
-                                        'Earn/Serv Offers',
+                                        'Earn/Offers',
                                         style:
                                             TextStyle(color: Colors.blueGrey),
                                       ),
@@ -320,10 +319,10 @@ class _HomeScreenState extends State<HomeScreen> {
                                   elevation: 5,
                                   child: SizedBox(
                                     height: 60,
-                                    width: size.width * .7,
+                                    width: size.width * .8,
                                   ),
                                 ),
-                                const SizedBox(height: 30),
+                                const SizedBox(height: 20),
                                 GestureDetector(
                                   onTap: () {
                                     Navigator.push(context,
@@ -337,7 +336,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                       elevation: 5,
                                       child: SizedBox(
                                         height: 100,
-                                        width: size.width * .7,
+                                        width: size.width * .8,
                                         child: Column(
                                           children: [
                                             const SizedBox(height: 5),

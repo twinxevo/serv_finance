@@ -1,3 +1,4 @@
+import 'package:fintech_app/screens/auth_screen/forgotPassword.dart';
 import 'package:fintech_app/screens/auth_screen/signupScreen.dart';
 import 'package:flutter/material.dart';
 
@@ -17,7 +18,7 @@ class LoginScreen extends StatelessWidget {
             child: Card(
               elevation: 10,
               child: Container(
-                height: 300,
+                height: 400,
                 padding: const EdgeInsets.symmetric(vertical: 30.0 - 10),
                 child: Center(
                   child: Form(
@@ -112,7 +113,28 @@ class LoginScreen extends StatelessWidget {
                           ),
                         ),
 
-                        const SizedBox(height: 30),
+                        const SizedBox(height: 5),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.end,
+                          children: [
+                            TextButton(
+                              onPressed: () {
+                                Navigator.push(
+                                  context,
+                                  MaterialPageRoute(
+                                      builder: (context) =>
+                                          const ForgotPassword()),
+                                );
+                              },
+                              child: const Text(
+                                'Forgot Password...',
+                                style: TextStyle(color: Colors.blueGrey),
+                              ),
+                            ),
+                          ],
+                        ),
+
+                        const SizedBox(height: 15),
 
                         //Next Button
                         SizedBox(
@@ -136,6 +158,22 @@ class LoginScreen extends StatelessWidget {
                                   'Login',
                                   style: TextStyle(fontSize: 17),
                                 )),
+                          ),
+                        ),
+
+                        const SizedBox(height: 5),
+
+                        TextButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(
+                                  builder: (context) => const SignupScreen()),
+                            );
+                          },
+                          child: const Text(
+                            'Create account',
+                            style: TextStyle(color: Colors.blueGrey),
                           ),
                         ),
                       ],
