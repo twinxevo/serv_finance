@@ -1,4 +1,9 @@
 import 'package:fintech_app/screens/homePage/transactionHistory.dart';
+import 'package:fintech_app/screens/ride_screen/mapBoxTest.dart';
+import 'package:fintech_app/screens/ride_screen/mapScreen.dart';
+import 'package:fintech_app/screens/ride_screen/ridePage.dart';
+import 'package:fintech_app/screens/ride_screen/searchLocation.dart';
+import 'package:fintech_app/screens/ride_screen/testRidePage.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -16,11 +21,11 @@ class _HomeScreenState extends State<HomeScreen> {
       child: Scaffold(
         body: Column(
           children: [
-            Row(
+            const Row(
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 Row(
-                  children: const [
+                  children: [
                     Padding(
                       padding: EdgeInsets.only(
                           left: 20.0, top: 10.0, right: 10.0, bottom: 10.0),
@@ -36,7 +41,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     ),
                   ],
                 ),
-                const Padding(
+                Padding(
                   padding: EdgeInsets.only(
                       left: 15.0, top: 10.0, right: 20.0, bottom: 10.0),
                   child: Icon(
@@ -72,7 +77,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             const Padding(
                               padding: EdgeInsets.only(top: 40.0),
                               child: Text(
-                                '₦ 200,000.00',
+                                '₦ 900,000.00',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 26,
@@ -86,15 +91,15 @@ class _HomeScreenState extends State<HomeScreen> {
                               width: size.width * .8,
                               color: const Color.fromARGB(255, 42, 34, 34),
                             ),
-                            Column(
+                            const Column(
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(
+                                  padding: EdgeInsets.only(
                                       left: 70.0, top: 15.0, right: 70.0),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
-                                    children: const [
+                                    children: [
                                       Icon(
                                         size: 30,
                                         Icons.add_box_rounded,
@@ -114,12 +119,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                   ),
                                 ),
                                 Padding(
-                                  padding: const EdgeInsets.only(
+                                  padding: EdgeInsets.only(
                                       left: 50.0, top: 5.0, right: 60.0),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
-                                    children: const [
+                                    children: [
                                       Text(
                                         'Add Money',
                                         style: TextStyle(
@@ -168,8 +173,8 @@ class _HomeScreenState extends State<HomeScreen> {
                                       crossAxisAlignment:
                                           CrossAxisAlignment.center,
                                       children: [
-                                        Padding(
-                                          padding: const EdgeInsets.only(
+                                        const Padding(
+                                          padding: EdgeInsets.only(
                                               left: 30.0,
                                               top: 10.0,
                                               right: 30.0),
@@ -179,7 +184,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 mainAxisAlignment:
                                                     MainAxisAlignment
                                                         .spaceBetween,
-                                                children: const [
+                                                children: [
                                                   CircleAvatar(
                                                     radius: 20,
                                                     backgroundColor:
@@ -217,12 +222,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                                   ),
                                                 ],
                                               ),
-                                              const SizedBox(height: 3),
+                                              SizedBox(height: 3),
                                               Row(
                                                 mainAxisAlignment:
                                                     MainAxisAlignment
                                                         .spaceBetween,
-                                                children: const [
+                                                children: [
                                                   Text('Airtime'),
                                                   Text('Data'),
                                                   Text('Cable/Tv'),
@@ -243,19 +248,37 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 mainAxisAlignment:
                                                     MainAxisAlignment
                                                         .spaceBetween,
-                                                children: const [
-                                                  CircleAvatar(
-                                                    radius: 20,
-                                                    backgroundColor:
-                                                        Color.fromARGB(
-                                                            255, 224, 233, 234),
-                                                    child: Icon(
-                                                      size: 25,
-                                                      Icons.car_rental_rounded,
-                                                      color: Colors.black,
+                                                children: [
+                                                  GestureDetector(
+                                                    onTap: () {
+                                                      Navigator.push(
+                                                          context,
+                                                          MaterialPageRoute(
+                                                              fullscreenDialog:
+                                                                  true,
+                                                              builder:
+                                                                  (context) {
+                                                                //return const SearchLocation();
+                                                                //return const MapPage();
+                                                                //return RidePage();
+                                                                //return TestMapPage();
+                                                                return MapboxMapTest();
+                                                              }));
+                                                    },
+                                                    child: const CircleAvatar(
+                                                      radius: 20,
+                                                      backgroundColor:
+                                                          Color.fromARGB(255,
+                                                              224, 233, 234),
+                                                      child: Icon(
+                                                        size: 25,
+                                                        Icons
+                                                            .car_rental_rounded,
+                                                        color: Colors.black,
+                                                      ),
                                                     ),
                                                   ),
-                                                  CircleAvatar(
+                                                  const CircleAvatar(
                                                     radius: 20,
                                                     backgroundColor:
                                                         Color.fromARGB(
@@ -266,7 +289,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                       color: Colors.black,
                                                     ),
                                                   ),
-                                                  CircleAvatar(
+                                                  const CircleAvatar(
                                                     radius: 25,
                                                     backgroundColor:
                                                         Color.fromARGB(
@@ -280,14 +303,14 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 ],
                                               ),
                                               const SizedBox(height: 3),
-                                              Padding(
-                                                padding: const EdgeInsets.only(
+                                              const Padding(
+                                                padding: EdgeInsets.only(
                                                     left: 5.0, right: 8.0),
                                                 child: Row(
                                                   mainAxisAlignment:
                                                       MainAxisAlignment
                                                           .spaceBetween,
-                                                  children: const [
+                                                  children: [
                                                     Text('Ride'),
                                                     Text('Escrow'),
                                                     Text('More'),
@@ -301,11 +324,11 @@ class _HomeScreenState extends State<HomeScreen> {
                                     ),
                                   ),
                                 ),
-                                const SizedBox(height: 20),
-                                Padding(
-                                  padding: const EdgeInsets.only(left: 8.0),
+                                const SizedBox(height: 10),
+                                const Padding(
+                                  padding: EdgeInsets.only(left: 8.0),
                                   child: Row(
-                                    children: const [
+                                    children: [
                                       Text(
                                         'Earn/Offers',
                                         style:
@@ -322,11 +345,12 @@ class _HomeScreenState extends State<HomeScreen> {
                                     width: size.width * .8,
                                   ),
                                 ),
-                                const SizedBox(height: 20),
+                                const SizedBox(height: 10),
                                 GestureDetector(
                                   onTap: () {
-                                    Navigator.push(context,
-                                        MaterialPageRoute(builder: (context) {
+                                    Navigator.push(context, MaterialPageRoute(
+                                        //fullscreenDialog: true,
+                                        builder: (context) {
                                       return const TransactionHistory();
                                     }));
                                   },
@@ -335,13 +359,13 @@ class _HomeScreenState extends State<HomeScreen> {
                                     child: Card(
                                       elevation: 5,
                                       child: SizedBox(
-                                        height: 100,
+                                        height: 110,
                                         width: size.width * .8,
-                                        child: Column(
+                                        child: const Column(
                                           children: [
-                                            const SizedBox(height: 5),
+                                            SizedBox(height: 5),
                                             Padding(
-                                              padding: const EdgeInsets.only(
+                                              padding: EdgeInsets.only(
                                                   left: 10.0,
                                                   bottom: 20.0,
                                                   right: 10.0),
@@ -349,7 +373,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                 mainAxisAlignment:
                                                     MainAxisAlignment
                                                         .spaceBetween,
-                                                children: const [
+                                                children: [
                                                   Text(
                                                     'Recent Transactions',
                                                     style: TextStyle(
@@ -365,7 +389,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                               ),
                                             ),
                                             Padding(
-                                              padding: const EdgeInsets.only(
+                                              padding: EdgeInsets.only(
                                                   left: 15.0, right: 15),
                                               child: Column(
                                                 children: [
@@ -373,7 +397,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     mainAxisAlignment:
                                                         MainAxisAlignment
                                                             .spaceBetween,
-                                                    children: const [
+                                                    children: [
                                                       Text('Money in '),
                                                       Text(
                                                         '+₦50,000.00',
@@ -384,7 +408,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                     ],
                                                   ),
                                                   Row(
-                                                    children: const [
+                                                    children: [
                                                       Text(
                                                         '- Esevoka Onoyovwere',
                                                         style: TextStyle(
@@ -393,9 +417,9 @@ class _HomeScreenState extends State<HomeScreen> {
                                                       ),
                                                     ],
                                                   ),
-                                                  const SizedBox(height: 2),
+                                                  SizedBox(height: 2),
                                                   Row(
-                                                    children: const [
+                                                    children: [
                                                       Text(
                                                         '11:52 AM',
                                                         style: TextStyle(

@@ -1,5 +1,5 @@
 import 'package:fintech_app/screens/auth_screen/loginScreen.dart';
-import 'package:fintech_app/screens/auth_screen/signupScreen.dart';
+//import 'package:fintech_app/screens/auth_screen/signupScreen.dart';
 import 'package:flutter/material.dart';
 
 void main() {
