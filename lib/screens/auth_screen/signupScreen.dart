@@ -24,8 +24,8 @@ class SignupScreen extends StatelessWidget {
                   children: [
                     SizedBox(
                       width: size.width * .8,
-                      child: Row(
-                        children: const [
+                      child: const Row(
+                        children: [
                           Text(
                             'Welcome Onboard',
                             style: TextStyle(

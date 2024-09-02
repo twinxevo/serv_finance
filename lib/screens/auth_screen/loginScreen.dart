@@ -27,8 +27,8 @@ class LoginScreen extends StatelessWidget {
                       children: [
                         SizedBox(
                           width: size.width * .8,
-                          child: Row(
-                            children: const [
+                          child: const Row(
+                            children: [
                               Text(
                                 'Welcome Back',
                                 style: TextStyle(

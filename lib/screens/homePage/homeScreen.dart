@@ -1,9 +1,5 @@
 import 'package:fintech_app/screens/homePage/transactionHistory.dart';
 import 'package:fintech_app/screens/ride_screen/mapBoxTest.dart';
-import 'package:fintech_app/screens/ride_screen/mapScreen.dart';
-import 'package:fintech_app/screens/ride_screen/ridePage.dart';
-import 'package:fintech_app/screens/ride_screen/searchLocation.dart';
-import 'package:fintech_app/screens/ride_screen/testRidePage.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
@@ -77,7 +73,7 @@ class _HomeScreenState extends State<HomeScreen> {
                             const Padding(
                               padding: EdgeInsets.only(top: 40.0),
                               child: Text(
-                                '₦ 900,000.00',
+                                '₦ 349,000.48',
                                 style: TextStyle(
                                   color: Colors.white,
                                   fontSize: 26,
@@ -85,7 +81,18 @@ class _HomeScreenState extends State<HomeScreen> {
                                 ),
                               ),
                             ),
-                            const SizedBox(height: 20),
+                            const Padding(
+                              padding: EdgeInsets.only(top: 10.0),
+                              child: Text(
+                                '821.91 Sol',
+                                style: TextStyle(
+                                  color: Colors.white,
+                                  fontSize: 18,
+                                  fontWeight: FontWeight.w400,
+                                ),
+                              ),
+                            ),
+                            const SizedBox(height: 5),
                             Container(
                               height: 2,
                               width: size.width * .8,
@@ -95,7 +102,7 @@ class _HomeScreenState extends State<HomeScreen> {
                               children: [
                                 Padding(
                                   padding: EdgeInsets.only(
-                                      left: 70.0, top: 15.0, right: 70.0),
+                                      left: 70.0, top: 10.0, right: 70.0),
                                   child: Row(
                                     mainAxisAlignment:
                                         MainAxisAlignment.spaceBetween,
@@ -153,7 +160,7 @@ class _HomeScreenState extends State<HomeScreen> {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 170),
+                      padding: const EdgeInsets.only(top: 200),
                       child: Padding(
                         padding:
                             const EdgeInsets.symmetric(horizontal: 30.0 - 10),
@@ -262,7 +269,7 @@ class _HomeScreenState extends State<HomeScreen> {
                                                                 //return const MapPage();
                                                                 //return RidePage();
                                                                 //return TestMapPage();
-                                                                return MapboxMapTest();
+                                                                return const MapboxMapTest();
                                                               }));
                                                     },
                                                     child: const CircleAvatar(

@@ -10,7 +10,7 @@ class CreateEscrowScreen extends StatefulWidget {
 class _CreateEscrowScreenState extends State<CreateEscrowScreen> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return const Scaffold(
       body: Column(
         children: <Widget>[],
       ),

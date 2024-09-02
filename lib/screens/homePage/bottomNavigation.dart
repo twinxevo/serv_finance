@@ -1,5 +1,4 @@
 import 'package:fintech_app/screens/auth_screen/loginScreen.dart';
-import 'package:fintech_app/screens/auth_screen/otpScreen.dart';
 import 'package:fintech_app/screens/auth_screen/signupScreen.dart';
 import 'package:fintech_app/screens/auth_screen/userDetailsScreen.dart';
 import 'package:fintech_app/screens/homePage/homeScreen.dart';
@@ -30,7 +29,7 @@ class _BottomNavigationBState extends State<BottomNavigationB> {
       bottomNavigationBar: NavigationBarTheme(
         data: const NavigationBarThemeData(
           labelTextStyle:
-              MaterialStatePropertyAll(TextStyle(fontWeight: FontWeight.bold)),
+              WidgetStatePropertyAll(TextStyle(fontWeight: FontWeight.bold)),
           indicatorColor: Color.fromARGB(255, 119, 147, 161),
         ),
         child: NavigationBar(
@@ -39,9 +38,9 @@ class _BottomNavigationBState extends State<BottomNavigationB> {
           selectedIndex: _selectedBar,
           labelBehavior: NavigationDestinationLabelBehavior.onlyShowSelected,
           animationDuration: const Duration(seconds: 2),
-          onDestinationSelected: (_selectedBar) {
+          onDestinationSelected: (selectedBar) {
             setState(() {
-              this._selectedBar = _selectedBar;
+              _selectedBar = selectedBar;
             });
           },
           destinations: const [

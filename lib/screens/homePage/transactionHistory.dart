@@ -35,11 +35,11 @@ class _TransactionHistoryState extends State<TransactionHistory> {
                   ),
                 ),
                 const SizedBox(height: 30),
-                SizedBox(
+                const SizedBox(
                   child: Padding(
-                    padding: const EdgeInsets.only(left: 20.0),
+                    padding: EdgeInsets.only(left: 20.0),
                     child: Row(
-                      children: const [
+                      children: [
                         Text(
                           'Transaction History',
                           style: TextStyle(
@@ -61,18 +61,18 @@ class _TransactionHistoryState extends State<TransactionHistory> {
                           child: SizedBox(
                             height: 100,
                             width: size.width * .8,
-                            child: Column(
+                            child: const Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(
+                                  padding: EdgeInsets.only(
                                       left: 15.0, right: 15),
                                   child: Column(
                                     children: [
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
-                                        children: const [
+                                        children: [
                                           Text('Money in '),
                                           Text(
                                             '+₦50,000.00',
@@ -82,7 +82,7 @@ class _TransactionHistoryState extends State<TransactionHistory> {
                                         ],
                                       ),
                                       Row(
-                                        children: const [
+                                        children: [
                                           Text(
                                             '- Esevoka Onoyovwere',
                                             style: TextStyle(
@@ -90,9 +90,9 @@ class _TransactionHistoryState extends State<TransactionHistory> {
                                           ),
                                         ],
                                       ),
-                                      const SizedBox(height: 2),
+                                      SizedBox(height: 2),
                                       Row(
-                                        children: const [
+                                        children: [
                                           Text(
                                             '11:52 AM',
                                             style: TextStyle(
@@ -117,18 +117,18 @@ class _TransactionHistoryState extends State<TransactionHistory> {
                           child: SizedBox(
                             height: 100,
                             width: size.width * .8,
-                            child: Column(
+                            child: const Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 Padding(
-                                  padding: const EdgeInsets.only(
+                                  padding: EdgeInsets.only(
                                       left: 15.0, right: 15),
                                   child: Column(
                                     children: [
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
-                                        children: const [
+                                        children: [
                                           Text('Money Out '),
                                           Text(
                                             '-₦49,000.00',
@@ -137,7 +137,7 @@ class _TransactionHistoryState extends State<TransactionHistory> {
                                         ],
                                       ),
                                       Row(
-                                        children: const [
+                                        children: [
                                           Text(
                                             '- Emmanuel Olokor',
                                             style: TextStyle(
@@ -145,11 +145,11 @@ class _TransactionHistoryState extends State<TransactionHistory> {
                                           ),
                                         ],
                                       ),
-                                      const SizedBox(height: 2),
+                                      SizedBox(height: 2),
                                       Row(
                                         mainAxisAlignment:
                                             MainAxisAlignment.spaceBetween,
-                                        children: const [
+                                        children: [
                                           Text(
                                             '12:25 PM',
                                             style: TextStyle(

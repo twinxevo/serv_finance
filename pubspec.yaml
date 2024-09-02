@@ -49,6 +49,7 @@ dependencies:
   http: ^1.2.1
   #mapbox_maps_flutter: ^1.1.0
   #mapbox_search: ^4.2.0
+  flutter_svg: ^2.0.10+1
 
 dev_dependencies:
   flutter_test:
@@ -75,7 +76,8 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/user_marker1.jpeg
-    #- lib/assets/user_marker.png
+    - assets/MapGIF1.gif
+  #   - lib/assets/user_marker.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 

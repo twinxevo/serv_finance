@@ -1,5 +1,7 @@
 import 'package:fintech_app/screens/ride_screen/globalVars.dart';
 import 'package:fintech_app/screens/ride_screen/map_api/fetchRoute.dart';
+import 'package:fintech_app/screens/ride_screen/searchLocation.dart';
+import 'package:fintech_app/screens/ride_screen/startTrip.dart';
 import 'package:flutter/material.dart';
 import 'package:mapbox_gl/mapbox_gl.dart';
 //import 'package:mapbox_maps_flutter/mapbox_maps_flutter.dart';
@@ -19,19 +21,39 @@ class _MapboxMapTestState extends State<MapboxMapTest> {
   //List<LatLng> routeCoordinates = [];
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: MapboxMap(
-        accessToken: mapboxToken,
-        initialCameraPosition: const CameraPosition(
-          target: LatLng(5.517138389059632, 6.033950056090037),
-          zoom: 5.0,
-        ),
+    return Scaffold(
+      body: Column(
+        children: [
+          Expanded(
+            child: MapboxMap(
+              accessToken: mapboxToken,
+              initialCameraPosition: const CameraPosition(
+                target: LatLng(5.517138389059632, 6.033950056090037),
+                zoom: 5.0,
+              ),
 
-        onMapCreated: _onMapCreated,
-        //onMapCreated: (MapboxMapController controller) async {
-        //mapController = controller;
-        //await _showUserLocation();
-        //},
+              onMapCreated: _onMapCreated,
+              //onMapCreated: (MapboxMapController controller) async {
+              //mapController = controller;
+              //await _showUserLocation();
+              //},
+            ),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(16.0),
+            child: ElevatedButton(
+                onPressed: () {
+                  Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                          fullscreenDialog: true,
+                          builder: (context) {
+                            return const SearchLocation();
+                          }));
+                },
+                child: const Text('Book Ride')),
+          ),
+        ],
       ),
     );
   }
@@ -57,7 +79,7 @@ class _MapboxMapTestState extends State<MapboxMapTest> {
       );
 
       // Fetch route coordinates from Directions API
-      LatLng destinationLocation = LatLng(
+      LatLng destinationLocation = const LatLng(
           5.517138389059632, 6.033950056090037); // Example destination location
       await fetchRouteCoordinates(
         LatLng(currentLocation.latitude, currentLocation.longitude),

@@ -1,5 +1,4 @@
 import 'package:fintech_app/screens/homePage/bottomNavigation.dart';
-import 'package:fintech_app/screens/homePage/homeScreen.dart';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
 
@@ -49,8 +48,8 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                     children: [
                       SizedBox(
                         width: size.width * .8,
-                        child: Row(
-                          children: const [
+                        child: const Row(
+                          children: [
                             Text(
                               'Tell us about yourself',
                               style: TextStyle(
@@ -181,17 +180,11 @@ class _UserDetailsScreenState extends State<UserDetailsScreen> {
                                     lastDate: DateTime(2024),
                                   );
 
-                                  if (dobPicked != null) {
-                                    String formatedDob =
-                                        DateFormat('yyyy-MM-dd')
-                                            .format(dobPicked);
-                                    setState(() {
-                                      dboController.text =
-                                          formatedDob.toString();
-                                    });
-                                  } else {
-                                    print('date of birth not selected');
-                                  }
+                                  String formatedDob = DateFormat('yyyy-MM-dd')
+                                      .format(dobPicked!);
+                                  setState(() {
+                                    dboController.text = formatedDob.toString();
+                                  });
                                 },
                                 decoration: const InputDecoration(
                                   floatingLabelStyle:

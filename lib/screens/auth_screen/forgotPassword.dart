@@ -26,8 +26,8 @@ class ForgotPassword extends StatelessWidget {
                         children: [
                           SizedBox(
                             width: size.width * .8,
-                            child: Row(
-                              children: const [
+                            child: const Row(
+                              children: [
                                 Text(
                                   'Password Reset',
                                   style: TextStyle(
